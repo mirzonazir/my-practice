@@ -41,3 +41,14 @@ console.log(`Значение в кубе = ${digit}`);
 digit % 2 !== 5;
 console.log(`Остаток от деления переменной на 5 = ${digit}`);
 
+//4
+console.log(`Результаты сравнения выражений `);
+console.log(5 > 4);
+console.log("ананас" > "яблоко");
+console.log("2" > "12");
+console.log(undefined == null);
+console.log(undefined === null);
+console.log(null == "0");
+console.log(null ===+ "0" );
+
+
