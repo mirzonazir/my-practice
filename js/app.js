@@ -40,7 +40,8 @@ console.log(`Деление на 4 будет ${digit}`);
 digit **= 3; 
 console.log(`Значение в кубе = ${digit}`);
 
-digit % 2 !== 5;
+digit %= 5;
+
 console.log(`Остаток от деления переменной на 5 = ${digit}`);
 
 //4
