@@ -60,7 +60,7 @@ console.log(null ===+ "0" );
 /* ----------- */
 
 /* Условные конструкции */
-/*2 
+/*2 и 3 одинаковые условия
 Напишите скрипт, который определяет, к какой четверти часа относится хранимое в отдельной переменной количество минут. 
 Скрипт должен выводить в консоль название четверти (Первая, вторая, третья или четвертая). 
 */
@@ -78,12 +78,28 @@ if(quarterHour > 0 && quarterHour < 16) {
 }
 /* ----------- */
 
-
+//4
 /* Напишите скрипт, который будет по номеру месяца определять время года. Если номера с таким месяцем не существует,  
 скрипт  должен выводить соответствующее сообщение в консоль.*/
 
 let seasonNumber = 5;
 let seasonName;
+
+if (seasonNumber > 0 && seasonNumber < 3 || seasonNumber === 12){
+    seasonName = 'зима';
+} else if(seasonNumber > 2 && seasonNumber < 6){
+    seasonName = "весна";
+}
+else if(seasonNumber > 5 && seasonNumber < 9){
+    seasonName = "лето";
+}
+else if(seasonNumber > 8 && seasonNumber < 12){
+    seasonName = "осень";
+} else{
+    seasonName = "не относится ни к какому сезону";
+}
+
+console.log(`Выбранный вами месяц относиться к сезону ${seasonName}`);
 
 /*
 switch (seasonNumber) {
@@ -103,20 +119,17 @@ switch (seasonNumber) {
         break;
 }; */
 
-if (seasonNumber > 0 && seasonNumber < 3 || seasonNumber === 12){
-    seasonName = 'зима';
-} else if(seasonNumber > 2 && seasonNumber < 6){
-    seasonName = "весна";
-}
-else if(seasonNumber > 5 && seasonNumber < 9){
-    seasonName = "лето";
-}
-else if(seasonNumber > 8 && seasonNumber < 12){
-    seasonName = "осень";
-} else{
-    seasonName = "не относится ни к какому сезону";
-}
-
-console.log(`Выбранный вами месяц относиться к сезону ${seasonName}`);
-
 /*-----------------*/
+
+
+//5
+/* Напишите скрипт, который будет выводить в консоль квадрат числа, если оно четное, и его кубическую степень в противном случае */
+
+let inputYourNumber = 9;
+if(inputYourNumber % 2 ===0){
+    inputYourNumber **= 2;
+    console.log(`Значение в квадрате будет ${inputYourNumber}`);
+} else if(inputYourNumber % 2 !== 0){
+    inputYourNumber **= 3;
+    console.log(`Значение в кубе равно ${inputYourNumber}`);
+};
