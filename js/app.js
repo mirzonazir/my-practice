@@ -146,8 +146,7 @@ for (step = 0; step < 5; step++) {
 
 let digitRange = 20;
 
-
-if (digitRange > 0 && digitRange < 100) {
+if (digitRange > 0 && digitRange <= 100) {
     for (digitRange = 0; digitRange < 100; digitRange++) {
         if (digitRange % 3 == 0 && digitRange % 5 == 0) {
             console.log(`${digitRange} - кратные на 3 и на 5`);
@@ -165,4 +164,8 @@ if (digitRange > 0 && digitRange < 100) {
 } else {
     console.log(`Введите число в диапазоне от 0 до 100`);
 }
+
+
+// Напишите скрипт, который вычисляет и выводит в консоль все трехзначные числа Армстронга
+
 
