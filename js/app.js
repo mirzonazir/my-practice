@@ -9,7 +9,7 @@ console.log(`Моё имя ${myName}`);
 console.log(`Мне ${myAge} года`);
 console.log(`Семейное положение - ${married}`);
 
-console.log("Типы использованных переменных - " + myName + ', '+ myAge+', ' + married + ' - имеют типы ' + typeof(myName) +' '+ typeof(myAge)+' '+ typeof(married));
+console.log("Типы использованных переменных - " + myName + ', ' + myAge + ', ' + married + ' - имеют типы ' + typeof (myName) + ' ' + typeof (myAge) + ' ' + typeof (married));
 /* ----------- */
 
 //практическое задание 1.2
@@ -27,19 +27,19 @@ console.log(`Напишите скрипт, в котором по-очеред�
 let digit = 0;
 console.log(`Стартовое значение: ${digit}`);
 
-digit += 7; 
+digit += 7;
 console.log(`Увеличение значение на 7 = ${digit}`);
 
-digit *= 4; 
+digit *= 4;
 console.log(`Увеличение в 4 будет ${digit}`);
 
-digit -= 8; 
+digit -= 8;
 console.log(`Уменьшение значения на 8 равно ${digit}`);
 
-digit /= 4; 
+digit /= 4;
 console.log(`Деление на 4 будет ${digit}`);
 
-digit **= 3; 
+digit **= 3;
 console.log(`Значение в кубе = ${digit}`);
 
 digit %= 5;
@@ -55,7 +55,7 @@ console.log("2" > "12");
 console.log(undefined == null);
 console.log(undefined === null);
 console.log(null == "0");
-console.log(null ===+ "0" );
+console.log(null === + "0");
 
 /* ----------- */
 
@@ -70,13 +70,13 @@ console.log(null ===+ "0" );
 
 let quarterHour = 48;
 
-if(quarterHour > 0 && quarterHour < 16) {
+if (quarterHour > 0 && quarterHour < 16) {
     console.log(`Первая`);
-}else if(quarterHour >  15 && quarterHour < 31){
+} else if (quarterHour > 15 && quarterHour < 31) {
     console.log(`Вторая`);
-}else if(quarterHour > 30 && quarterHour < 46){
+} else if (quarterHour > 30 && quarterHour < 46) {
     console.log(`Третья`);
-}else if(quarterHour > 45 && quarterHour < 60) {
+} else if (quarterHour > 45 && quarterHour < 60) {
     console.log(`Четвертая`);
 }
 /* ----------- */
@@ -88,17 +88,17 @@ if(quarterHour > 0 && quarterHour < 16) {
 let seasonNumber = 5;
 let seasonName;
 
-if (seasonNumber > 0 && seasonNumber < 3 || seasonNumber === 12){
+if (seasonNumber > 0 && seasonNumber < 3 || seasonNumber === 12) {
     seasonName = 'зима';
-} else if(seasonNumber > 2 && seasonNumber < 6){
+} else if (seasonNumber > 2 && seasonNumber < 6) {
     seasonName = "весна";
 }
-else if(seasonNumber > 5 && seasonNumber < 9){
+else if (seasonNumber > 5 && seasonNumber < 9) {
     seasonName = "лето";
 }
-else if(seasonNumber > 8 && seasonNumber < 12){
+else if (seasonNumber > 8 && seasonNumber < 12) {
     seasonName = "осень";
-} else{
+} else {
     seasonName = "не относится ни к какому сезону";
 }
 
@@ -129,10 +129,40 @@ switch (seasonNumber) {
 /* Напишите скрипт, который будет выводить в консоль квадрат числа, если оно четное, и его кубическую степень в противном случае */
 
 let inputYourNumber = 9;
-if(inputYourNumber % 2 ===0){
+if (inputYourNumber % 2 === 0) {
     inputYourNumber **= 2;
     console.log(`Значение в квадрате будет ${inputYourNumber}`);
-} else if(inputYourNumber % 2 !== 0){
+} else if (inputYourNumber % 2 !== 0) {
     inputYourNumber **= 3;
     console.log(`Значение в кубе равно ${inputYourNumber}`);
 };
+
+let step;
+for (step = 0; step < 5; step++) {
+    console.log(`${step} Идём 1 шаг на восток`);
+}
+
+/* Напишите скрипт, который определяет все числа в диапазоне от 1 до 100, кратные 3, 5 или 3 и 5 одновременно. */
+
+let digitRange = 20;
+
+
+if (digitRange > 0 && digitRange < 100) {
+    for (digitRange = 0; digitRange < 100; digitRange++) {
+        if (digitRange % 3 == 0 && digitRange % 5 == 0) {
+            console.log(`${digitRange} - кратные на 3 и на 5`);
+        }
+        if (digitRange % 3 == 0) {
+            console.log(`${digitRange} - делится на 3`);
+        }else if (digitRange % 5 == 0) {
+            console.log(`${digitRange} - делится на 5`);
+        }
+        else {
+            console.log(` ${digitRange} - Не делится на 3 или на 5`);
+        }
+
+    }
+} else {
+    console.log(`Введите число в диапазоне от 0 до 100`);
+}
+
