@@ -181,6 +181,19 @@ for (let i = 1; i < 10; i++) {
 }
 
 
+//
+
+let numberA = 12, numberB = 30;
+let NOD;
+while (numberA!=numberB) {  
+    if (numberA > numberB) {
+        numberA = numberA - numberB;
+    } else {
+        numberB = numberB - numberA;
+    }
+}
+NOD = numberA; 
+console.log(NOD);
 
 
 
